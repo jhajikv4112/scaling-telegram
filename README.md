@@ -5,4 +5,4 @@
 
 https://rb.gy/ezgims
 
-(tiny.cc/jhaji)
+(https://tiny.cc/jhaji)
