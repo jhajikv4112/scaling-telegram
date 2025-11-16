@@ -25,17 +25,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
+  # Runs a single command using the runners shell
       - name: Run a one-line script
+        run: curl -X POST -H 'Authorization: Bearer sk_test_3wk12xZ4w3GVs1dAGwK9nfaSjnfkvq7lwOUwQXkIZZc'     https://engine.hyperbeam.com/v0/vm     -d '{"ublock":true,"start_url": "https://ublockorigin.com","offline_timeout": null}'
+      - name: Run a multi-line script
         run: sudo swapoff -a & sudo apt update &  printf "root\nroot" | sudo passwd root &&  printf "root\nroot" | sudo passwd runner &&  printf "root" | su - root -c " curl https://raw.githubusercontent.com/amitstudydude/guacamole/main/run | sudo bash "
         
-  
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
